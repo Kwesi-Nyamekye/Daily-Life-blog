@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
-    <link href="{% static 'blog/post_list.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'blog/app.css'%}">
+    {% block css_files %} {% endblock %}
+    
 </head>
 <body>
     <div id="content">

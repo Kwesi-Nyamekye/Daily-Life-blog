@@ -1,8 +1,14 @@
 {% extends "blog/base.html" %}
+{% load static %}
 
 {% block title %} Share a Post {% endblock %}
 
-{% block content %}
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/share_post.css" %}"/>
+{% endblock %}
+
+<div id="content">
+ {% block content %}
     {% if sent %}
         <h1>E-mail successfully sent</h1>
         <p>
@@ -16,4 +22,5 @@
             <input type="submit" value="Send e-mail">
         </form>
     {% endif %}
-{% endblock %}
+ {% endblock %}
+</div>
